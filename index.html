@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Environmental Monitoring System</title>
+
+    <meta http-equiv="refresh" content="5">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Environmental Monitoring System</h1>
+
+        <p class="subtitle">
+            Smart Learning Environment Monitoring
+        </p>
+
+        <div class="cards">
+
+            <!-- Temperature -->
+            <div class="card">
+                <h2>Temperature</h2>
+
+                <div class="value">
+                    {{ temperature }} °C
+                </div>
+            </div>
+
+            <!-- Humidity -->
+            <div class="card">
+                <h2>Humidity</h2>
+
+                <div class="value">
+                    {{ humidity }} %
+                </div>
+            </div>
+
+            <!-- Air Quality -->
+            <div class="card">
+                <h2>Air Quality Raw</h2>
+
+                <div class="value">
+                    {{ air_quality }}
+                </div>
+            </div>
+
+            <!-- Light Intensity -->
+            <div class="card">
+                <h2>Light Intensity Raw</h2>
+
+                <div class="value">
+                    {{ light_intensity }}
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Last Recorded -->
+        <div class="last-record">
+
+            <h3>Last Recorded</h3>
+
+            <p>{{ recorded_at }}</p>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
